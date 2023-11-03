@@ -27,7 +27,7 @@ public class DragNDrop {
         open("/drag_and_drop");
         $("#column-a header").shouldHave(text("A"));
         $("#column-b header").shouldHave(text("B"));
-        $("div#column-a").dragAndDrop((DragAndDropOptions) $("div#column-b"));
+        $("#column-a").dragAndDrop((DragAndDropOptions) $("div#column-b"));
         $("#column-a header").shouldHave(text("B"));
         $("#column-b header").shouldHave(text("A"));
     }

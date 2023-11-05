@@ -9,12 +9,12 @@ import static com.codeborne.selenide.Selenide.*;
 
 public class DragNDrop {
     @BeforeAll
-    static void BeforeAll() {
+    static void beforeAll() {
         Configuration.pageLoadStrategy = "eager";
         Configuration.baseUrl = "https://the-internet.herokuapp.com";
     }
     @Test
-    void DragNDropActionTest(){
+    void dragNDropActionTest(){
         open("/drag_and_drop");
         $("#column-a header").shouldHave(text("A"));
         $("#column-b header").shouldHave(text("B"));
@@ -23,7 +23,7 @@ public class DragNDrop {
         $("#column-b header").shouldHave(text("A"));
     }
     @Test
-    void DragNDropTest(){
+    void dragNDropTest(){
         open("/drag_and_drop");
         $("#column-a header").shouldHave(text("A"));
         $("#column-b header").shouldHave(text("B"));

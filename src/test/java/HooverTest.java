@@ -16,7 +16,7 @@ public class HooverTest {
     }
 
     @Test
-    void LookingForEnterprise() throws InterruptedException {
+    void lookingForEnterprise() throws InterruptedException {
         open("https://github.com/");
         $(byText("Solutions")).hover();
         $("ul [aria-labelledby=solutions-for-heading]").$(byText("Enterprise")).click();
